@@ -19,18 +19,18 @@ typedef NS_ENUM(NSUInteger, ARDynamicSizeCaculateType) {
 
 @implementation UICollectionView (ARDynamicCacheHeightLayoutCell)
 
-+(void)initialize
++(void)load
 {
     SEL selectors[] =
     {@selector(registerNib:forCellWithReuseIdentifier:),
-    @selector(registerClass:forCellWithReuseIdentifier:),
-    @selector(reloadData),
-    @selector(reloadSections:),
-    @selector(deleteSections:),
-    @selector(moveSection:toSection:),
-    @selector(reloadItemsAtIndexPaths:),
-    @selector(deleteItemsAtIndexPaths:),
-    @selector(moveItemAtIndexPath:toIndexPath:)};
+        @selector(registerClass:forCellWithReuseIdentifier:),
+        @selector(reloadData),
+        @selector(reloadSections:),
+        @selector(deleteSections:),
+        @selector(moveSection:toSection:),
+        @selector(reloadItemsAtIndexPaths:),
+        @selector(deleteItemsAtIndexPaths:),
+        @selector(moveItemAtIndexPath:toIndexPath:)};
     
     for (int i = 0; i < sizeof(selectors)/sizeof(SEL); i++) {
         SEL originalSelector = selectors[i];
@@ -218,9 +218,17 @@ typedef NS_ENUM(NSUInteger, ARDynamicSizeCaculateType) {
 {
     NSMutableArray *cache = objc_getAssociatedObject(self, _cmd);
     if (cache == nil) {
-        cache = @[].mutableCopy;
-        objc_setAssociatedObject(self, _cmd, cache, OBJC_ASSOCIATION_RETAIN);
+        cache = [[NSMutableArray alloc] init];
     }
+    
+    NSInteger numberOfSection = [self.dataSource numberOfSectionsInCollectionView:self];
+    for (NSInteger index = cache.count; index < numberOfSection; index ++) {
+        NSMutableArray *mutableArray = [[NSMutableArray alloc] init];
+        [cache addObject: mutableArray];
+    }
+    
+    objc_setAssociatedObject(self, _cmd, cache, OBJC_ASSOCIATION_RETAIN);
+    
     return cache;
 }
 

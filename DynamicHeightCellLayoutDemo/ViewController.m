@@ -49,7 +49,7 @@
                         [UIImage imageNamed:@"3.jpg"],
                         [UIImage imageNamed:@"Jiker.png"]];
     
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 3; i++) {
         FeedModel *feed = [[FeedModel alloc] init];
         feed.title = titles[arc4random()%3];
         feed.content = contents[arc4random()%3];
@@ -88,6 +88,11 @@
 }
 
 #pragma mark - dataSource
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 2;
+}
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
