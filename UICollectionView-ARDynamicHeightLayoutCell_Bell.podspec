@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "UICollectionView-ARDynamicHeightLayoutCell"
-  s.version      = "1.0"
+  s.name         = "UICollectionView-ARDynamicHeightLayoutCell_Bell"
+  s.version      = "1.0.1"
   s.summary      = "Automatically UICollectionViewCell size calculating."
 
   s.description  = <<-DESC
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                    * Finally, don't worry about the indent, CocoaPods strips it!
                    DESC
 
-  s.homepage     = "https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell"
+  s.homepage     = "https://github.com/zjr999/UICollectionView-ARDynamicHeightLayoutCell"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -53,9 +53,9 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author             = { "August" => "liupingwei30@gmail.com" }
+  # s.author             = { "August" => "liupingwei30@gmail.com" }
   # Or just: s.author    = "August"
-  # s.authors            = { "August" => "liupingwei30@gmail.com" }
+   s.authors            = { "August" => "liupingwei30@gmail.com","Bell" => "zjr999@gmail.com" }
   # s.social_media_url   = "http://twitter.com/August"
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -64,7 +64,7 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  # s.platform     = :ios
+   s.platform     = :ios
   # s.platform     = :ios, "6.0"
 
   #  When using multiple platforms
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell.git", :tag => "1.0" }
+  s.source       = { :git => "https://github.com/zjr999/UICollectionView-ARDynamicHeightLayoutCell.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -116,7 +116,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "UIKit"
-  # s.frameworks = "UIKit", "Foundation"
+   s.frameworks = "UIKit", "Foundation"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
