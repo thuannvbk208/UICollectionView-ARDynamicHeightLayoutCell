@@ -1,3 +1,6 @@
+# Fork
+fork from https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell of version v1.0
+
 # UICollectionView+ARDynamicHeightLayoutCell
 
 * An simple category for caculating autolayout UICollectionViewCell size. Automatic manage cell's size cache, automatic invalidate, most improve efficiency.
