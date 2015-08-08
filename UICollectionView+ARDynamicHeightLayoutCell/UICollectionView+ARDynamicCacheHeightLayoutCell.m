@@ -219,28 +219,23 @@ typedef NS_ENUM(NSUInteger, ARDynamicSizeCaculateType) {
     NSMutableArray *cache = objc_getAssociatedObject(self, _cmd);
     if (cache == nil) {
         cache = [[NSMutableArray alloc] init];
+        objc_setAssociatedObject(self, _cmd, cache, OBJC_ASSOCIATION_RETAIN);
     }
-    
-    NSInteger numberOfSection = [self.dataSource numberOfSectionsInCollectionView:self];
-    for (NSInteger index = cache.count; index < numberOfSection; index ++) {
-        NSMutableArray *mutableArray = [[NSMutableArray alloc] init];
-        [cache addObject: mutableArray];
-    }
-    
-    objc_setAssociatedObject(self, _cmd, cache, OBJC_ASSOCIATION_RETAIN);
-    
     return cache;
 }
 
 -(BOOL)hasCacheAtIndexPath:(NSIndexPath *)indexPath
 {
     BOOL hasCache = NO;
-    if ([self sizeCache].count > indexPath.section) {
-        if ([[self sizeCache][indexPath.section] count] > indexPath.row) {
+    NSMutableArray *cache = [self sizeCache];
+    if (cache.count > indexPath.section) {
+        if ([cache[indexPath.section] count] > indexPath.row) {
             hasCache = YES;
         }
-    }else{
-        [[self sizeCache] addObject:@[].mutableCopy];
+    } else {
+        for (NSInteger index = cache.count; index <= indexPath.section; index ++) {
+            [cache addObject:@[].mutableCopy];
+        }
     }
     
     return hasCache;
