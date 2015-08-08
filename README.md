@@ -67,10 +67,13 @@ if your cell use autolayout , all you need just to do like this:
 
 ## Install
 
-pod 'UICollectionView-ARDynamicHeightLayoutCell', :git => 'https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell.git'
-
+pod 'UICollectionView-ARDynamicHeightLayoutCell_Bell'
 
 ## Release Versions
+
+* v1.0.1
+  
+  modify the bug crushing when more than one sections
 
 * v1.0
 
