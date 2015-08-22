@@ -1,3 +1,6 @@
+# Fork
+fork from https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell of version v1.0
+
 # UICollectionView+ARDynamicHeightLayoutCell
 
 * An simple category for caculating autolayout UICollectionViewCell size. Automatic manage cell's size cache, automatic invalidate, most improve efficiency.
@@ -71,9 +74,13 @@ pod 'UICollectionView-ARDynamicHeightLayoutCell_Bell'
 
 ## Release Versions
 
+* v1.0.2
+  
+  fix the bug of cursh when using UIAlertView
+
 * v1.0.1
   
-  modify the bug crushing when more than one sections
+  fix the bug crushing when more than one sections
 
 * v1.0
 
