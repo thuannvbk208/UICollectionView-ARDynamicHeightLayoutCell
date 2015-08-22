@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "UICollectionView-ARDynamicHeightLayoutCell_Bell"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "Automatically UICollectionViewCell size calculating."
 
   s.description  = <<-DESC
