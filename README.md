@@ -1,5 +1,5 @@
 # Fork
-fork from https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell of version v1.0
+fork from [UICollectionView-ARDynamicHeightLayoutCell](https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell) of version v1.0
 
 # UICollectionView+ARDynamicHeightLayoutCell
 
@@ -73,6 +73,10 @@ if your cell use autolayout , all you need just to do like this:
 pod 'UICollectionView-ARDynamicHeightLayoutCell_Bell'
 
 ## Release Versions
+
+* v1.0.3
+
+  fix the bug of crushing when device orientation changed
 
 * v1.0.2
   
