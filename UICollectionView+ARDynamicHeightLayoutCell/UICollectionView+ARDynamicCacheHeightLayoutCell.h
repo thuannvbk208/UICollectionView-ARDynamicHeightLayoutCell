@@ -35,7 +35,7 @@
  */
 -(CGSize)ar_sizeForCellWithIdentifier:(NSString *)identifier
                             indexPath:(NSIndexPath *)indexPath
-                        configuration:(void(^)(id cell))configuration;
+                        configuration:(void(^)(__kindof UICollectionViewCell *))configuration;
 
 /**
  *  caculate cell size with a fixed width
@@ -47,11 +47,10 @@
  *
  *  @return the caculated cell's height
  */
-
 -(CGSize)ar_sizeForCellWithIdentifier:(NSString *)identifier
                             indexPath:(NSIndexPath *)indexPath
                            fixedWidth:(CGFloat)fixedWidth
-                        configuration:(void (^)(id cell))configuration;
+                        configuration:(void (^)(__kindof UICollectionViewCell *))configuration;
 
 /**
  *  caculate cell size with fixed height
@@ -63,10 +62,9 @@
  *
  *  @return the caculated cell's height
  */
-
 -(CGSize)ar_sizeForCellWithIdentifier:(NSString *)identifier
                             indexPath:(NSIndexPath *)indexPath
                           fixedHeight:(CGFloat)fixedHeight
-                        configuration:(void (^)(id cell))configuration;
+                        configuration:(void (^)(__kindof UICollectionViewCell *))configuration;
 
 @end
