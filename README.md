@@ -1,3 +1,6 @@
+#  Deserted
+this repository is deserted,it is changed to <https://github.com/GreedBell/UICollectionView-ARDynamicHeightLayoutCell>
+
 # Fork
 fork from [UICollectionView-ARDynamicHeightLayoutCell](https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell) of version v1.0
 
